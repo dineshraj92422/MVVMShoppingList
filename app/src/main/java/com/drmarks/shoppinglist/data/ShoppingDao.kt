@@ -1,4 +1,4 @@
-package com.drmarks.shoppinglist
+package com.drmarks.shoppinglist.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
