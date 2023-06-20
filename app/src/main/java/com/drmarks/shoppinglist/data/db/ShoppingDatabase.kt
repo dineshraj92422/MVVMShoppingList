@@ -1,9 +1,10 @@
-package com.drmarks.shoppinglist.data
+package com.drmarks.shoppinglist.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.drmarks.shoppinglist.data.db.entities.ShoppingItem
 
 
 @Database(
