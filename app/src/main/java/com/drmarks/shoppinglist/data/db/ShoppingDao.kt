@@ -10,11 +10,12 @@ import com.drmarks.shoppinglist.data.db.entities.ShoppingItem
 
 @Dao
 interface ShoppingDao {
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun upsert(item: ShoppingItem)         // It is combination of insert and update. If a data available in DB it will update it otherwise insert it.
+    suspend fun upsert(item: ShoppingItem)
 
     @Delete
-    suspend fun delete(item: ShoppingItem)   //suspend is to call function asynchronously
+    suspend fun delete(item: ShoppingItem)
 
     @Query("SELECT * FROM shopping_items")
     fun getAllShoppingItems(): LiveData<List<ShoppingItem>>
